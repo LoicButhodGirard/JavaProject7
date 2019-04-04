@@ -18,13 +18,17 @@ public class Spawn {
 	public void tick() {
 		scoreKeep++;
 		
+		//levelsysteem
 		if(scoreKeep >= 500) {
 			scoreKeep = 0;
+			//add level
 			hud.setLevel(hud.getLevel() + 1);
 			
+			//if level = .. add enemy
 			if(hud.getLevel() == 2) {
 				//basic
 				handler.addObject(new BasicEnemy(r.nextInt(Game.WIDTH - 50), r.nextInt(Game.HEIGHT - 50), ID.BasicEnemy, handler));
+				handler.addObject(new GioEnemy(r.nextInt(Game.WIDTH - 50), r.nextInt(Game.HEIGHT - 50), ID.GioEnemy, handler));
 				}else if(hud.getLevel() == 3) {
 				//basic
 				handler.addObject(new BasicEnemy(r.nextInt(Game.WIDTH - 50), r.nextInt(Game.HEIGHT - 50), ID.BasicEnemy, handler));

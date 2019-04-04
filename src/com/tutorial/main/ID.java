@@ -11,5 +11,6 @@ public enum ID {
 	BasicEnemy(),
 	SmartEnemy(),
 	EnemyBoss(),
-	LargeEnemy();
+	LargeEnemy(),
+	GioEnemy();
 }
