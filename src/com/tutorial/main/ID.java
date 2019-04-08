@@ -2,6 +2,7 @@ package com.tutorial.main;
 
 public enum ID {
 	
+	paddle(),
 	Player(),
 	Player2(),
 	Player3(),
