@@ -55,24 +55,6 @@ public class Player extends GameObject {
 				}
 			}
 			
-			if(tempObject.getId() == ID.GioEnemy) {
-				if(getBounds().intersects(tempObject.getBounds())) {
-					//collision code
-					if(id == ID.Player) {
-						HUD.HEALTH -=100;
-					}
-					if(id == ID.Player2) {
-						HUD.HEALTH2 -=100;
-					}
-					if(id == ID.Player3) {
-						HUD.HEALTH3 -=100;
-					}
-					if(id == ID.Player4) {
-						HUD.HEALTH4 -=100;
-					}
-				}
-			}
-			
 			if(tempObject.getId() == ID.SmartEnemy) {
 				if(getBounds().intersects(tempObject.getBounds())) {
 					//collision code
