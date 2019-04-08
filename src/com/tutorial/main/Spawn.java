@@ -18,7 +18,10 @@ public class Spawn {
 	public void tick() {
 		scoreKeep++;
 		
+<<<<<<< HEAD
+=======
 		//levelsysteem
+>>>>>>> 497cde5f7f3e0fb57902fc8b369c30ef986192c0
 		if(scoreKeep >= 500) {
 			scoreKeep = 0;
 			//add level
@@ -47,6 +50,8 @@ public class Spawn {
 				//large
 				handler.addObject(new LargeEnemy(r.nextInt(Game.WIDTH - 50), r.nextInt(Game.HEIGHT - 50), ID.LargeEnemy, handler));
 			}else if(hud.getLevel() == 10) {
+<<<<<<< HEAD
+=======
 				handler.clearEnemys();
 				handler.clearEnemys();
 				handler.clearEnemys();
@@ -130,10 +135,14 @@ public class Spawn {
 				handler.clearEnemys();
 				handler.clearEnemys();
 				handler.addObject(new EnemyBoss((Game.WIDTH / 2 - 50), -140, ID.EnemyBoss, handler));
+>>>>>>> 497cde5f7f3e0fb57902fc8b369c30ef986192c0
 				handler.addObject(new EnemyBoss((Game.WIDTH / 2 - 50), -140, ID.EnemyBoss, handler));
 				
 			}
 			
+		}
+		if(hud.getLevel() == 10) {
+			handler.clearEnemys();
 		}
 	}
 
