@@ -4,23 +4,23 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 
-public class GioEnemy extends GameObject {
+public class VerticalEnemy extends GameObject {
 	
 	private Handler handler;
 	
-	public GioEnemy(float x, float y, ID id, Handler handler) {
+	public VerticalEnemy(float x, float y, ID id, Handler handler) {
 		super(x, y, id);
 		
 		this.handler = handler;
 		
-		velX = 5;
-		velY = 5;
+		velX = 1;
+		velY = 25;
 		
 	}
 	
 	//damage range
 	public Rectangle getBounds() {
-		return new Rectangle((int)x, (int)y, 2, 2);
+		return new Rectangle((int)x, (int)y, 5, 5);
 	}
 
 	public void tick() {
@@ -32,12 +32,12 @@ public class GioEnemy extends GameObject {
 		if(x <= 0 || x >= Game.WIDTH - 22) velX *= -1;
 		
 		//trail
-		handler.addObject(new Trail(x, y, ID.Trail, Color.red, 2, 2, 0.05f, handler));
+		handler.addObject(new Trail(x, y, ID.Trail, Color.orange, 2, 2, 0.05f, handler));
 	}
 
 	public void render(Graphics g) {
-		g.setColor(Color.red);
-		g.fillRect((int)x, (int)y, 2, 2);
+		g.setColor(Color.orange);
+		g.fillRect((int)x, (int)y, 5, 5);
 	}
 	
 }
