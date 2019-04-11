@@ -29,7 +29,7 @@ public class Game extends Canvas implements Runnable {
 	};
 	
 	//beginscherm is Menu of Game
-	public STATE gameState = STATE.Game;
+	public STATE gameState = STATE.Menu;
 	
 	public Game() {
 
@@ -41,7 +41,7 @@ public class Game extends Canvas implements Runnable {
 		
 		hud = new HUD();
 		spawner = new Spawn(handler, hud);
-		menu = new Menu();
+		menu = new Menu(this);
 		r = new Random();
 		
 		//players en enemy toevoegen aan Game
@@ -131,9 +131,7 @@ public class Game extends Canvas implements Runnable {
 		}else if(gameState == STATE.Menu) {
 			menu.render(g);
 		}
-		
-		
-		
+				
 		g.dispose();
 		bs.show();
 	}
