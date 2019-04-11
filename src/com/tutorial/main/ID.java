@@ -2,6 +2,7 @@ package com.tutorial.main;
 
 public enum ID {
 	
+	paddle(),
 	Player(),
 	Player2(),
 	Player3(),
@@ -12,6 +13,6 @@ public enum ID {
 	SmartEnemy(),
 	EnemyBoss(),
 	LargeEnemy(),
-	VerticalEnemy();
-	
+	VerticalEnemy(),
+	Bullet();
 }

@@ -1,5 +1,6 @@
 package com.tutorial.main;
 
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.event.MouseAdapter;
 
@@ -23,5 +24,6 @@ public class Menu extends MouseAdapter{
 	
 	public void render(Graphics g) {
 		g.drawRect(100, 100, 100, 64);
+		g.setColor(Color.white);
 	}
 }
