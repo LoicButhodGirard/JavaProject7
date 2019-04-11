@@ -13,5 +13,6 @@ public enum ID {
 	SmartEnemy(),
 	EnemyBoss(),
 	LargeEnemy(),
+	VerticalEnemy(),
 	Bullet();
 }
